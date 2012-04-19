@@ -1,0 +1,5 @@
+<h4>Insert your username to start</h4>
+<%= form_for(User.new) do |u| %>
+  <%= u.text_field(:name) %>
+  <%= u.submit("Start") %>
+<% end %>

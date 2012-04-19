@@ -1,0 +1,16 @@
+<div id="container">
+  <ul id="message">
+    <%= render :partial => 'messages/message', :collection => @messages %>
+  </ul>
+  
+  <% if !@user.blank? %>
+    <%= form_for(Message.new) do |m| %>
+      <%= m.label(@user.name) %>
+      <%= m.text_field(:text, :size => 50) %>
+      <%= m.hidden_field(:user_id, :value => @user.id) %>
+      <%= m.submit "Send" %>   <small><%= link_to("change user name", start_path) %></small>
+    <% end %>
+  <% else %>
+    go to <%= link_to("this link", start_path) %> to join chat
+  <% end %>
+</div>

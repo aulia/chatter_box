@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChatterBox</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="main">
+    <header>
+      <nav>
+      <div id="logo">
+        <div id="logo_text">
+          <h1>ChatterBox</h1>
+        </div>
+      </div>
+      </nav>
+    </header>
+    <div id="site_content">
+      <div class="content">
+        <%= yield %>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright</p>
+    </footer>
+  </div>
+</body>
+</html>
