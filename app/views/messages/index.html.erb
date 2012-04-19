@@ -1,6 +1,7 @@
 <div id="container">
   <ul id="message">
     <%= render :partial => 'messages/message', :collection => @messages %>
+    <h4><%= "Start new chat" if !@messages.blank? %></h4>
   </ul>
   
   <% if !@user.blank? %>
